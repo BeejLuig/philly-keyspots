@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import FloatingHeader from './components/FloatingHeader.js'
-import List from './components/List.js'
+import ListDivided from './components/ListDivided.js'
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
         < FloatingHeader />
         <article>
           <aside className="keyspot-list">
-            < List />
+            < ListDivided />
           </aside>
         </article>
       </div>
