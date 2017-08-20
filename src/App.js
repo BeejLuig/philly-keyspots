@@ -8,7 +8,7 @@ import MapContainer from './components/MapContainer.js';
 
 class App extends Component {
   state = {
-
+    features: []
   }
 
   getKeySpotData = () => {
@@ -31,7 +31,7 @@ class App extends Component {
 
   componentDidMount() {
     this.getMap();
-    this.getKeySpotData().then(data => console.log(data));
+    this.getKeySpotData().then(data => this.setState({ features: data.features }));
   }
 
   render() {
@@ -40,7 +40,7 @@ class App extends Component {
         <FloatingHeader />
         <article>
           <aside className="keyspot-list">
-            <ListDivided />
+            { this.state.features.length > 0 ? <ListDivided features={this.state.features} /> : "Loading..." }
           </aside>
           <MapContainer />
         </article>

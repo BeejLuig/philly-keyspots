@@ -23,7 +23,7 @@ article {
 .keyspot-list {
   display: inline-block;
   height: calc(100vh - 5.8em);
-  max-width: 300px;
+  max-width: 270px;
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 0 0.5em;
@@ -42,7 +42,7 @@ article {
 #map {
   height: 543px;
   display: inline-block;
-  width: calc(100% - 278px);
+  width: calc(100% - 270px);
 }
 
 /**
