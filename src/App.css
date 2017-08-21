@@ -22,8 +22,8 @@ article {
 
 .keyspot-list {
   display: inline-block;
-  height: 580px;
-  max-width: 270px;
+  height: 550px;
+  max-width: 260px;
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 0 0.5em;
@@ -48,7 +48,7 @@ article {
 **/
 
 #map {
-  height: 580px;
+  height: 550px;
   display: inline-block;
   width: calc(100% - 270px);
 }
@@ -63,7 +63,9 @@ article {
   margin-bottom: 0;
 }
 
-.ui.floated.header {
+.ui.floated.header.right {
+  margin-bottom: 3px;
+  margin-top: 3px;
 }
 
 .ui.floated.header.left {
