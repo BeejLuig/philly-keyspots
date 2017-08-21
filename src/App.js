@@ -26,7 +26,7 @@ class App extends Component {
         id: 'mapbox.streets',
         accessToken: token
     }).addTo(map);
-    var marker = L.marker([39.982598,-75.15703]).addTo(map);
+    L.marker([39.982598,-75.15703]).addTo(map);
     return map;
   };
 
