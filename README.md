@@ -8,6 +8,7 @@ This app uses the [Leaflet](http://leafletjs.com/) for it's map. After cloning t
 In the main project folder, create a file called `env.js`. Inside, type: `export default "<YOUR-TOKEN-HERE>"`
 
 You can see a live version of this app [here](http://bjcantlupe.com/philly-keyspots)
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
