@@ -2,7 +2,7 @@
   "name": "philly-keyspots",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://beejluig.github.io/philly-keyspots",
+  "homepage": "https://BeejLuig.github.io/philly-keyspots",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "leaflet": "^1.2.0",
