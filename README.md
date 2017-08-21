@@ -1,3 +1,12 @@
+# Philadelphia KEYSPOTS
+
+A single-page app that shows Philly KEYSPOT locations on an interactive map.
+
+## Download and use
+
+This app uses the [Leaflet](http://leafletjs.com/) for it's map. After cloning the repository, you must get an API key from Leaflet. 
+In the main project folder, create a file called `env.js`. Inside, type: `export default "<YOUR-TOKEN-HERE>"`
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
