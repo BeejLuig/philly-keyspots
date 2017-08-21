@@ -22,7 +22,7 @@ article {
 
 .keyspot-list {
   display: inline-block;
-  height: 550px;
+  height: 700px;
   max-width: 260px;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -48,7 +48,7 @@ article {
 **/
 
 #map {
-  height: 550px;
+  height: 700px;
   display: inline-block;
   width: calc(100% - 260px);
 }
