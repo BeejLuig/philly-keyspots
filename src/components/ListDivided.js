@@ -5,7 +5,7 @@ const ListDivided = (props) => {
 
   const listItems = props.features.map((feature, index) => (
     <List.Item key={index} id={"feature-" + index}>
-      <List.Icon name='github' size='large' verticalAlign='middle' />
+      <List.Icon name='circle' size='large' verticalAlign='middle' />
       <List.Content>
         <List.Header as='a'>{feature.properties.Name}</List.Header>
         <List.Description as='a'>{feature.properties.Street}</List.Description>
