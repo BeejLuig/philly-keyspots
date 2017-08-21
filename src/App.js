@@ -32,7 +32,7 @@ class App extends Component {
 
   setMarkers = (map, features) => {
     features.forEach(feature => {
-      L.marker(feature.geometry.coordinates.reverse()).addTo(map).bindPopup(`
+      L.marker(feature.geometry.coordinates.reverse(), { alt: feature.properties.Name }).addTo(map).bindPopup(`
         <div class='popup-header'>
           <h3 class='location-name'>${feature.properties.Name}</h3>
         </div><p class='location-street'>${feature.properties.Street}<br>${feature.properties.City}, PA</p><p class='location-phone'>${feature.properties["PHONE NUMBER"] || "no phone number provided"}</p>`);
