@@ -6,7 +6,7 @@ const FloatingHeader = () => (
     <Header as='h2' floated='right'>
       KEYSPOTS
     </Header>
-    <Header as='h2' floated='left'>
+    <Header as='h3' floated='left'>
       LOGO
     </Header>
   </Segment>

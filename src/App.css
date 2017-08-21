@@ -64,5 +64,10 @@ article {
 }
 
 .ui.floated.header {
+}
+
+.ui.floated.header.left {
+    background-color: #c7c7c7;
     margin-bottom: 0;
+    padding: 8px 40px;
 }
