@@ -41,7 +41,7 @@ class App extends Component {
 
   handleListItemClick = (e) => {
     const name = e.target.textContent;
-    const marker = document.querySelector(`[alt='${name}']`)
+    const marker = document.querySelector(`[alt="${name}"]`)
     if (!!marker) { marker.click() }
   }
 
