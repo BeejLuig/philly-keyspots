@@ -22,15 +22,23 @@ article {
 
 .keyspot-list {
   display: inline-block;
-  height: calc(100vh - 5.8em);
+  height: 580px;
   max-width: 270px;
   overflow-x: hidden;
   overflow-y: scroll;
   padding: 0 0.5em;
 }
 
-.ui.list:first-child {
+.ui.relaxed.list .item {
+  line-height: 0.5em;
+}
+
+.ui.relaxed.list:first-child {
   margin-top: 0.4em;
+}
+
+.circle.icon {
+  color: gray;
 }
 
 /**
@@ -40,7 +48,7 @@ article {
 **/
 
 #map {
-  height: 543px;
+  height: 580px;
   display: inline-block;
   width: calc(100% - 270px);
 }

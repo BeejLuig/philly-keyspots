@@ -16,22 +16,34 @@ class App extends Component {
     .then(resp => resp.json())
     .then(data => data)
     .catch(error => console.log("Error:", error))
-  }
+  };
 
-  getMap = () => {
-    var mymap = L.map('map').setView([39.982598, -75.15703], 12.35);
+  buildMap = () => {
+    var map = L.map('map').setView([39.982598, -75.15703], 12.35);
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
         maxZoom: 18,
         id: 'mapbox.streets',
         accessToken: token
-    }).addTo(mymap);
-    var marker = L.marker([39.982598,-75.15703]).addTo(mymap);
+    }).addTo(map);
+    var marker = L.marker([39.982598,-75.15703]).addTo(map);
+    return map;
+  };
+
+  setMarkers = (map, features) => {
+    features.forEach(feature => {
+      L.marker(feature.geometry.coordinates.reverse()).addTo(map).bindPopup(`
+        <div class='popup-header'>
+          <h3 class='location-name'>${feature.properties.Name}</h3>
+        </div><p class='location-street'>${feature.properties.Street}<br>${feature.properties.City}, PA</p><p class='location-phone'>${feature.properties["PHONE NUMBER"] || "no phone number provided"}</p>`);
+    });
   }
 
   componentDidMount() {
-    this.getMap();
-    this.getKeySpotData().then(data => this.setState({ features: data.features }));
+    this.getKeySpotData()
+      .then(data => this.setState({ features: data.features }))
+      .then(() => this.buildMap())
+      .then(map => this.setMarkers(map, this.state.features));
   }
 
   render() {
