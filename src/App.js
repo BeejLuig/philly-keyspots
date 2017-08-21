@@ -39,11 +39,18 @@ class App extends Component {
     });
   }
 
+  handleListItemClick = (e) => {
+    const name = e.target.textContent;
+    const marker = document.querySelector(`[alt='${name}']`)
+    if (!!marker) { marker.click() }
+  }
+
   componentDidMount() {
     this.getKeySpotData()
       .then(data => this.setState({ features: data.features }))
       .then(() => this.buildMap())
-      .then(map => this.setMarkers(map, this.state.features));
+      .then(map => this.setMarkers(map, this.state.features))
+      .catch()
   }
 
   render() {
@@ -52,7 +59,7 @@ class App extends Component {
         <FloatingHeader />
         <article>
           <aside className="keyspot-list">
-            { this.state.features.length > 0 ? <ListDivided features={this.state.features} /> : "Loading..." }
+            { this.state.features.length > 0 ? <ListDivided handleClick={this.handleListItemClick} features={this.state.features} /> : "Loading..." }
           </aside>
           <MapContainer />
         </article>
